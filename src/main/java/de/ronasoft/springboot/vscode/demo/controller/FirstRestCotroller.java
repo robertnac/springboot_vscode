@@ -1,5 +1,7 @@
 package de.ronasoft.springboot.vscode.demo.controller;
 
+import java.time.LocalTime;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +15,7 @@ public class FirstRestCotroller {
 
     @GetMapping("/hello")
     public String hello() {
-        return "hello world 2141"; 
+        LocalTime currentTime = LocalTime.now();
+        return "Now is: " + currentTime;
     }      
 }
