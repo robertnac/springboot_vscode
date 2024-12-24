@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Main {
@@ -9,7 +10,7 @@ public class Main {
      * @return         	description of return value
      */
     public static void main(String[] args) {
-        LocalTime currentTime = LocalTime.now();
+        LocalDateTime  currentTime = LocalDateTime.now();
         System.out.println("Current time: " + currentTime);
     }
 }
