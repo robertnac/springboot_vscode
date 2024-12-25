@@ -1,4 +1,4 @@
-package de.ronasoft.springboot.vscode.demo;
+package de.ronasoft.springboot.vscode;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

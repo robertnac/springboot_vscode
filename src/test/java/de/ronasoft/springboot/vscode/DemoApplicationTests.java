@@ -1,4 +1,4 @@
-package de.ronasoft.springboot.vscode.demo;
+package de.ronasoft.springboot.vscode;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
