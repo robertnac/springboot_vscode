@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TextController {
 
-    @GetMapping("/text", produces = "text/plain")
+    @GetMapping("/text")
     public String getText() {
         return "Hello, the current date and time is: " + LocalDateTime.now();
     }
