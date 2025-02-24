@@ -1,3 +1,0 @@
-logging:
-  level:
-    de.ronasoft.springboot.vscode.controller.TextController: DEBUG

@@ -1,13 +1,13 @@
-package de.ronasoft.springboot.vscode;
+package de.ronasoft.testsprongboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class TestsprongbootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(TestsprongbootApplication.class, args);
 	}
 
 }
