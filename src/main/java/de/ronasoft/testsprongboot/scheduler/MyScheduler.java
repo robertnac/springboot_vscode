@@ -1,5 +1,7 @@
 package de.ronasoft.testsprongboot.scheduler;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -8,6 +10,9 @@ import java.time.format.DateTimeFormatter;
 
 @Component
 public class MyScheduler {
+
+    // Create an SLF4J logger instance
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyScheduler.class);
 
     // Runs once a day at 3 AM
     @Scheduled(cron = "0 0 3 * * ?")
@@ -19,7 +24,7 @@ public class MyScheduler {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String formattedTime = now.format(formatter);
 
-        // Print the formatted time
-        System.out.println("Scheduled task executed at: " + formattedTime);
+        // Log the formatted time
+        LOGGER.info("Scheduled task executed at: {}", formattedTime);
     }
 }
