@@ -9,14 +9,14 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Component
-public class MyScheduler {
+public class LSKScheduler {
 
     // Create an SLF4J logger instance
-    private static final Logger LOGGER = LoggerFactory.getLogger(MyScheduler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(LSKScheduler.class);
 
     // Runs once a day at 3 AM
     @Scheduled(cron = "0 0 3 * * ?")
-    public void runTask() {
+    public void scheduledJob() {
         // Get the current time
         LocalDateTime now = LocalDateTime.now();
 
