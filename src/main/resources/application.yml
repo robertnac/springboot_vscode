@@ -1,3 +1,15 @@
 spring:
   application:
     name: testsprongboot
+
+scheduler:
+  # cron: "*/5 * * * * ?" # Runs every 5 seconds
+  # cron: "0 0 3 * * ?" # Runs once a day at 3 AM
+  cron: "*/3 * * * * ?" # Runs every 3 seconds
+
+logging:
+  level:
+    root: warn # Set the root logger to WARN
+    de.ronasoft.testsprongboot.scheduler.LSKScheduler: info # Set LSKScheduler logger to INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n" # Customize the console log format
