@@ -3,6 +3,8 @@ package de.ronasoft.springboot.vscode.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import de.ronasoft.springboot.vscode.entity.Person;
 
 public class PersonRepository {
