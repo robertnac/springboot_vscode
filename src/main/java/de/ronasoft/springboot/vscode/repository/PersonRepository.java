@@ -1,7 +1,9 @@
 package de.ronasoft.springboot.vscode.repository;
 
+import java.rmi.server.UID;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Component;
 
@@ -22,7 +24,7 @@ public class PersonRepository {
     }
 
     // Read a person by ID
-    public Person getPersonById(int id) {
+    public Person getPersonById(UUID id) {
         return persons.stream()
                       .filter(person -> person.getId() == id)
                       .findFirst()
@@ -30,7 +32,7 @@ public class PersonRepository {
     }
 
     // Update a person
-    public boolean updatePerson(int id, Person updatedPerson) {
+    public boolean updatePerson(UUID id, Person updatedPerson) {
         for (int i = 0; i < persons.size(); i++) {
             if (persons.get(i).getId() == id) {
                 persons.set(i, updatedPerson);
@@ -41,7 +43,7 @@ public class PersonRepository {
     }
 
     // Delete a person
-    public boolean deletePerson(int id) {
+    public boolean deletePerson(UUID id) {
         return persons.removeIf(person -> person.getId() == id);
     }
 }

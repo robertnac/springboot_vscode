@@ -1,10 +1,11 @@
 package de.ronasoft.springboot.vscode.entity;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class Person {
 
-    private Long id;
+    private UUID id;
 
     private String firstname;
     private String lastname;
@@ -20,12 +21,19 @@ public class Person {
         this.birthdate = birthdate;
     }
 
+    public Person(UUID id, String firstname, String lastname, LocalDate birthdate) {
+        this.id = id;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.birthdate = birthdate;
+    }
+
     // Getters and setters
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

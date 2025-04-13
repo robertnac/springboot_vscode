@@ -11,6 +11,7 @@ import de.ronasoft.springboot.vscode.repository.PersonRepository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/persons")
@@ -31,9 +32,9 @@ public class PersonController {
     @Bean   
     CommandLineRunner init() {
         return args -> {
-            personRepository.addPerson(new Person("John", "Doe", LocalDate.of(1990, 1, 1)));
-            personRepository.addPerson(new Person("Jane", "Doe", LocalDate.of(1992, 2, 2)));
-            personRepository.addPerson(new Person("Jim", "Beam", LocalDate.of(1994, 3, 3)));
+            personRepository.addPerson(new Person(UUID.randomUUID(), "John", "Doe", LocalDate.of(1990, 1, 1)));
+            personRepository.addPerson(new Person(UUID.randomUUID(), "Jane", "Doe", LocalDate.of(1992, 2, 2)));
+            personRepository.addPerson(new Person(UUID.randomUUID(), "Jim", "Beam", LocalDate.of(1994, 3, 3)));
         };
     }    
 
