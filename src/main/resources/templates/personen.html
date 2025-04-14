@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Persons List</title>
+</head>
+<body>
+    <!-- Ausgabe der Variablen persons und persons.size() 
+    <p th:text="${persons}">[persons not found]</p>
+    <div th:if="${#lists.isEmpty(persons)}">Liste ist leer!</div>
+    
+    <p th:text="${persons}">[persons not found]</p>
+    <div th:if="${#lists.isEmpty(persons)}">Liste ist leer!</div>
+    -->
+
+    <h1>Persons</h1>
+    <table border="1">
+        <tr th:each="person : ${persons}">
+            <td th:text="${person.id}"></td>
+            <td th:text="${person.firstname}"></td>
+            <td th:text="${person.lastname}"></td>
+            <td th:text="${person.birthdate}"></td>
+        </tr>
+    </table>
+</body>
+</html>
