@@ -19,3 +19,4 @@ INSERT INTO some_table (id, name) VALUES (12, 'Test 12');
 INSERT INTO some_table (id, name) VALUES (13, 'Test 13');
 INSERT INTO some_table (id, name) VALUES (14, 'Test 14');
 INSERT INTO some_table (id, name) VALUES (15, 'Test 15');
+INSERT INTO some_table (id, name) VALUES (16, 'Test 16');
