@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Select Person</title>
+</head>
+<body>
+    <h1>Select a Person</h1>
+    <form th:action="@{/persons/select-person}" method="post">
+        <ul>
+            <li th:each="person : ${persons}">
+                <input type="radio" name="personId" th:id="'person-' + ${person.id}" th:value="${person.id}" required>
+                <label th:for="'person-' + ${person.id}" th:text="${person.lastname}"></label>
+            </li>
+        </ul>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

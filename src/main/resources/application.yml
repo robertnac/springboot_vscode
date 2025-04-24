@@ -23,6 +23,7 @@ logging:
   level:
     root: warn # Set the root logger to WARN
     de.ronasoft.testsprongboot.scheduler.LSKScheduler: warn # Set LSKScheduler logger to WARN
+    de.ronasoft.testsprongboot.controller.PersonController2 : debug # Set PersonController2 logger to DEBUG
     de.ronasoft.testsprongboot.controller.PersonController : debug # Set PersonController logger to DEBUG
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n" # Customize the console log format

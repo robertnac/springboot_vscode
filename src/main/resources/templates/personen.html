@@ -13,13 +13,17 @@
     -->
 
     <h1>Persons</h1>
-    <table border="1">
-        <tr th:each="person : ${persons}">
-            <td th:text="${person.id}"></td>
-            <td th:text="${person.firstname}"></td>
-            <td th:text="${person.lastname}"></td>
-            <td th:text="${person.birthdate}"></td>
-        </tr>
-    </table>
+    <form th:action="@{/persons/submitSelected}" th:object="${id}" method="post">
+        <table border="1">
+            <tr th:each="person : ${persons}">
+                <td><input type="radio" name="selectedPerson" th:value="${person.id}" /></td>
+                <td th:text="${person.id}"></td>
+                <td th:text="${person.firstname}"></td>
+                <td th:text="${person.lastname}"></td>
+                <td th:text="${person.birthdate}"></td>
+            </tr>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
