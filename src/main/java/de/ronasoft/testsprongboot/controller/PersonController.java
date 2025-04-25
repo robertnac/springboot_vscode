@@ -29,6 +29,12 @@ public class PersonController {
         return personRepository.getAllPersons();
     }
 
+
+    /**
+     * Anzeige von allen Personen
+     * @param model
+     * @return
+     */
     @GetMapping("/view")
     public String viewAllPersons(Model model) {
         List<Person> persons = personRepository.getAllPersons();
