@@ -9,7 +9,7 @@
         <ul>
             <li th:each="person : ${persons}">
                 <input type="radio" name="personId" th:id="'person-' + ${person.id}" th:value="${person.id}" required>
-                <label th:for="'person-' + ${person.id}" th:text="${person.lastname}"></label>
+                <label th:for="'person-' + ${person.id}" th:text="${person.firstname} + ' ' + ${person.lastname} "></label>
             </li>
         </ul>
         <button type="submit">Submit</button>
