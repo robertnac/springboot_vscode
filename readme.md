@@ -1,2 +1,3 @@
  - URL der Anwendung: http://localhost:8080/hello
  - 2 URL: http://localhost:8080/persons/view - Anzeige aller Personen
+ - http://localhost:8080/persons/select-person Anzeige aller Personen mit Auswahl einer Person
